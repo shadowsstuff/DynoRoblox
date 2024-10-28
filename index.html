@@ -4,6 +4,17 @@
     <html>
         <h1>
             DynaRoblox!
+            <button onclick="launchApp()">Open App</button>
+            <script>
+                function launchApp() {
+                    try {
+                        var shell = new ActiveXObject("WScript.Shell");
+                        shell.Run("C:\Users\laury\Downloads\Roblox-2007-Client-main\Roblox-2007-Client-main/Roblox.exe");
+                    } catch (e) {
+                        alert("Unable to open app. This only works in Internet Explorer and requires certain security permissions.");
+                    }
+                }
+            </script>
         </h1>
     </html>
 </body>
